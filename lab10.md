@@ -39,13 +39,19 @@ plt.show()
 
 ![small shirt](shirt_gray_small.png)
 
+### Sandal
+
 ![sandal](sandal.png)
 
-![small sandal](sandal.png)
+![small sandal](sandal_gray_small.png)
+
+### Dress
 
 ![dress](dress.png)
 
 ![small dress](dress_gray_small.png)
+
+### Pullover
 
 ![pullover](pullover.png)
 
