@@ -3,7 +3,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 import tensorflow as tf
 
-def curate(image_name):
+# Given a file name, parse image and convert it to grayscale, 
+# resize it, invert it, and scale it down it:
+def parse_image(image_name):
 	# open the image and convert to gray scale:
 	im = Image.open(image_name).convert('L')
 
@@ -39,13 +41,12 @@ def curate(image_name):
 	return final_im
 
 # parse the data:
-im1 = curate("shirt.png")
-im2 = curate("sandal.png")
-im3 = curate("dress.png")
-im4 = curate("pullover.png")
+im1 = parse_image("shirt.png")
+im2 = parse_image("sandal.png")
+im3 = parse_image("dress.png")
+im4 = parse_image("pullover.png")
 
-print(im1.shape)
-
+# plot the images:
 plt.figure()
 plt.subplot(2,2,1)
 plt.imshow(im1)
@@ -100,17 +101,16 @@ probability_model = tf.keras.Sequential([model,
 
 images = np.array([im1,im2,im3,im4])
 
-# predictions_single = probability_model.predict(images)
-
-# # print out all the predictions:
-# print(predictions_single)
-
 # loop through images and print the classifications:
 for i in range(len(images)):
 	img = (np.expand_dims(images[i],0))
+
+	# get the predictions:
 	predictions_single = probability_model.predict(img)
 
+	# print the predictions:
 	print(predictions_single)
 
+	# print the clothing index:
 	clothing_index = np.argmax(predictions_single[0])
 	print(class_names[clothing_index])
