@@ -61,7 +61,7 @@ plt.show()
 
 ![classifications](classifications.png)
 
-## Code Snippets (full code in check3.py):
+## Code Snippets (full code in ![check3.py](https://github.com/roryeiffe/oss-lab10/blob/master/check3.py)):
 
 ### Image Manipulation:
 
