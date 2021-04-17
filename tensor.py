@@ -37,6 +37,8 @@ train_images = train_images / 255.0
 
 test_images = test_images / 255.0
 
+print("shape",test_images[0].shape)
+
 # Verify the Data:
 
 # plt.figure(figsize=(10,10))

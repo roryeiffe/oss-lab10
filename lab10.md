@@ -28,3 +28,29 @@ for i in range(num_images):
   plot_value_array(j, predictions[j], test_labels)
 plt.show()
 ```
+
+# Checkpoint 3
+
+## Data:
+
+### Shirt
+
+![shirt](shirt.png)
+
+![small shirt](shirt_gray_small.png)
+
+![sandal](sandal.png)
+
+![small sandal](sandal.png)
+
+![dress](dress.png)
+
+![small dress](dress_gray_small.png)
+
+![pullover](pullover.png)
+
+![small pullover](pullover_gray_small.png)
+
+### Classifications:
+
+![classifications](classifications.png)
